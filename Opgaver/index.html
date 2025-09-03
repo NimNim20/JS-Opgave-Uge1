@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opgave Side</title>
+</head>
+
+<body>
+  <h1>Opgaver</h1>
+  <p id="text">Dette er en tekst der skal skiftes</p>
+  <button id="changeTextButton">Skift tekst</button>
+
+</body>
+
+
+
+<script>
+  //Opgave 1. Return summen af tal fra en liste
+  sum([1, 2, 3]);
+
+  function sum(list) {
+    let sum = 0;
+    for (let i = 0; i < list.length; i++) {
+      sum += list[i];
+    }
+    console.log("The sum is:", sum);
+  }
+
+
+  //Opgave 3. Return mængden af vokaler i en streng
+  countVowels("React er bedre end Angular");
+
+  function countVowels(str) {
+    let count = 0;
+    const vowels = "aeiouæøåAEIOUÆØÅ";
+    for (let i = 0; i < str.length; i++) {
+      if (vowels.includes(str[i])) {
+        count++;
+      }
+    }
+    console.log("Mængden af vokaler:", count);
+  }
+
+  //Opgave 5. Reverse en streng
+  reverseString("Hvad er en docker?");
+  function reverseString(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversed += str[i];
+    }
+    console.log("Reversed string:", reversed);
+  }
+
+  //Opgave 7. Skift tekst i DOM element
+  document.getElementById("changeTextButton").addEventListener("click", function () {
+    document.getElementById("text").innerText = "Teksten er nu skiftet!";
+    document.getElementById("text").style.color = "red";
+  });
+</script>
+
+</html>
